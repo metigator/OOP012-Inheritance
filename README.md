@@ -11,6 +11,9 @@
 
 The `Manager` class represents a manager employee.
 
+![image](https://github.com/metigator/OOP012-Inheritance/assets/87314838/7d603408-3a28-4f34-9bcc-6ec2022da3d9)
+
+
 ### Properties
 
 - `Id` (Integer): The employee's ID.
@@ -60,6 +63,9 @@ public class Manager
 
 The `SalesAgent` class represents a sales agent employee.
 
+![image](https://github.com/metigator/OOP012-Inheritance/assets/87314838/9e74c658-42d2-4520-9178-7577cc904983)
+
+
 ### Properties
 
 - `Id` (Integer): The employee's ID.
@@ -108,6 +114,9 @@ public class SalesAgent
 ### Handyman
 
 The `Handyman` class represents a handyman employee.
+
+![image](https://github.com/metigator/OOP012-Inheritance/assets/87314838/2e7fcf07-8755-48e2-976e-25b911b22c19)
+
 
 ### Properties
 
@@ -165,6 +174,9 @@ public decimal CalculateNetSalary(Handyman handyman)
 ### Software Engineer
 
 The `SoftwareEngineer` class represents a software engineer employee.
+
+![image](https://github.com/metigator/OOP012-Inheritance/assets/87314838/4e0263ac-c252-4f05-af60-533f23e21a9d)
+
 
 ### Properties
 
