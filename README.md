@@ -152,7 +152,7 @@ public class Handyman
         $"Net Salary: {netSalary.ToString("C")}";
     }
 }
-
+```
 ### Software Engineer
 
 The `SoftwareEngineer` class represents a software engineer employee.
@@ -167,17 +167,6 @@ The `SoftwareEngineer` class represents a software engineer employee.
 - `LoggedHours` (Integer): The actual number of work hours logged by the software engineer.
 - `TrainingAllowance` (Decimal): The training allowance amount for the software engineer.
 - `StoryPointCompleted` (Integer): The number of story points completed by the software engineer.
-
-### Methods
-
-#### `CalculateNetSalary()`
-
->Calculates the gross salary based on the hourly rate and the expected number of work hours.
-Determines the overtime pay for any hours exceeding the expected number of work hours.
-Adds the training allowance to the salary.
-Adds an additional amount of $40 to the salary if the number of story points completed is greater than or equal to 80.
-Deducts the income tax from the gross salary. The tax rate is fixed at 10%.
-Calculates the net salary after deducting the taxes.
 
 ```csharp
 public class SoftwareEngineer
