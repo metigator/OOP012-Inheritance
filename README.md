@@ -4,7 +4,7 @@
 >The Salary Calculation System is designed to calculate the net salary for different employee roles based on their specific attributes and rules. The system supports the following employee roles: Manager, Sales Agent, Handyman, and Software Engineer.
 
 >يهدف نظام حساب الرواتب إلى حساب الرواتب الصافية لأدوار الموظفين المختلفة استنادًا إلى سماتهم والقواعد الخاصة بهم. يدعم النظام الأدوار التالية: مدير، وكيل مبيعات، حرفي، ومهندس برمجيات.
-![image](https://github.com/metigator/OOP012-Inheritance/assets/87314838/c608c54a-0ebf-4dc3-a29e-6ba796d62660)
+![image](https://github.com/metigator/OOP012-Inheritance/assets/87314838/42d3a974-96a3-4031-a694-6d75d1c4e1c4)
 
 
 
