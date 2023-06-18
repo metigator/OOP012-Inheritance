@@ -75,7 +75,6 @@ The `SalesAgent` class represents a sales agent employee.
 - `ExpectedHours` (Integer): The expected number of work hours for the sales agent.
 - `LoggedHours` (Integer): The actual number of work hours logged by the sales agent.
 - `TotalSales` (Decimal): The total sales amount achieved by the sales agent.
-- `Commission` (Decimal): The commission rate for the sales agent.
 
 ### Methods
 
@@ -98,7 +97,6 @@ public class SalesAgent
     public int ExpectedHours { get; set; }
     public int LoggedHours { get; set; }
     public decimal TotalSales { get; set; }
-    public decimal Commission { get; set; }
 
     public decimal CalculateNetSalary()
     {
