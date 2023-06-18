@@ -203,7 +203,7 @@ public class SoftwareEngineer
             $"Basic Salary: {basicSalary.ToString("C")}\n" +
             $"Overtime({HRConstants.OvertimeRate}x): {overtime.ToString("C")}\n" +
             $"Training Allowance: {TrainingAllowance.ToString("C")}\n" +
-            $"Bonus(>={StoryPointCompleted}): {bonus.ToString("C")}\n" +
+            $"Bonus(>={HRConstants.SoftwareEngineerStoryPointThreshold}): {bonus.ToString("C")}\n" +
             $"Gross Pay: {grossSalary.ToString("C")}\n" +
             $"Tax Amount ({(HRConstants.TaxRate).ToString("%0")}): {taxAmount.ToString("C")}\n" +
             $"-------------------------------------\n" +
@@ -222,5 +222,6 @@ public class SoftwareEngineer
         public static decimal TaxRate = 0.1m; // 10%
         public static decimal CommissionRate = 0.0005m; // 0.05%
         public static decimal SoftwareEngineerBonusAmount = 40.0m;
+        public static int SoftwareEngineerStoryPointThreshold = 8;
     }
 ```
