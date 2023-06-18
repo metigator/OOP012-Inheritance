@@ -94,8 +94,8 @@ public class SalesAgent
         decimal grossSalary = 0;
         decimal taxAmount = 0;
         decimal netSalary = 0;
-        decimal overtime = ;
-        decimal commission = ;
+        decimal overtime = 0;
+        decimal commission = 0;
 
         return $"Employee: #{Id} ({FullName}).\n" +
         $"Hours Logged: {LoggedHours} hrs.\n" +
