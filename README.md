@@ -35,6 +35,8 @@ public class Manager
     public int LoggedHours { get; set; }
     public decimal Allowance { get; set; }
 
+    public string FullName => $"{FName} {LName}";
+
     public string ShowSalarySlip()
     {
         decimal basicSalary = 0;
@@ -83,6 +85,8 @@ public class SalesAgent
     public int ExpectedHours { get; set; }
     public int LoggedHours { get; set; }
     public decimal TotalSales { get; set; }
+
+    public string FullName => $"{FName} {LName}";
     
     public string ShowSalarySlip()
     {
@@ -131,6 +135,8 @@ public class Handyman
     public int ExpectedHours { get; set; }
     public int LoggedHours { get; set; }
     public decimal Hardship { get; set; }
+
+    public string FullName => $"{FName} {LName}";
     
     public string ShowSalarySlip()
     {
@@ -179,15 +185,17 @@ public class SoftwareEngineer
     public int LoggedHours { get; set; }
     public decimal TrainingAllowance { get; set; }
     public int StoryPointCompleted { get; set; }
-
+    
+    public string FullName => $"{FName} {LName}";
+    
     public string ShowSalarySlip()
     {
-        decimal basicSalary = CalculateBasicSalary();
-        decimal grossSalary = CalculateGrossPayAmount();
-        decimal taxAmount = CalculateTaxAmount();
-        decimal netSalary = CalculateNetSalary();
-        decimal overtime = CalculateOvertimeAmount();
-        decimal bonus = CalculateBonus();
+        decimal basicSalary = 0;
+        decimal grossSalary = 0;
+        decimal taxAmount = 0;
+        decimal netSalary = 0;
+        decimal overtime = 0;
+        decimal bonus = 0;
 
         return $"Employee: #{Id} ({FullName}).\n" +
         $"Hours Logged: {LoggedHours} hrs.\n" +
