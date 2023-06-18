@@ -5,7 +5,7 @@
 
 >يهدف نظام حساب الرواتب إلى حساب الرواتب الصافية لأدوار الموظفين المختلفة استنادًا إلى سماتهم والقواعد الخاصة بهم. يدعم النظام الأدوار التالية: مدير، وكيل مبيعات، حرفي، ومهندس برمجيات.
 
-![image](https://github.com/metigator/OOP012-Inheritance/assets/87314838/d51821a2-632f-4e55-8834-569a61674851)
+![image](https://github.com/metigator/OOP012-Inheritance/assets/87314838/241aa258-6a6e-4e93-9efe-9076ebcd40da)
 
 
 ## Features
