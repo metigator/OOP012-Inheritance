@@ -103,6 +103,7 @@ public class SalesAgent
         $"Hourly rate: {HourlyRate.ToString("C")} /hr.\n" +
         $"Basic Salary: {basicSalary.ToString("C")}\n" +
         $"Overtime({HRConstants.OvertimeRate}x): {overtime.ToString("C")}\n" +
+        $"Total Sales: {TotalSales.ToString("C")}\n" +
         $"Commission({(HRConstants.CommissionRate).ToString("%0")}): {commission.ToString("C")}\n"+
         $"Gross Pay: {grossSalary.ToString("C")}\n" +
         $"Tax Amount ({(HRConstants.TaxRate).ToString("%0")}): {taxAmount.ToString("C")}\n" +
