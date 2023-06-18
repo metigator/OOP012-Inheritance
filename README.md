@@ -15,9 +15,6 @@
 
 The `Manager` class represents a manager employee.
 
-
-### Properties
-
 - `Id` (Integer): The employee's ID.
 - `FName` (String): The employee's first name.
 - `LName` (String): The employee's last name.
@@ -25,16 +22,6 @@ The `Manager` class represents a manager employee.
 - `ExpectedHours` (Integer): The expected number of work hours for the manager.
 - `LoggedHours` (Integer): The actual number of work hours logged by the manager.
 - `Allowance` (Decimal): Any additional allowance added to the manager's salary.
-
-### Methods
-
-#### `CalculateNetSalary()`
-
->Calculates the gross salary based on the hourly rate and the expected number of work hours.
-Determines the overtime pay for any hours exceeding the expected number of work hours.
-Adds the allowance to the salary.
-Deducts the income tax from the gross salary. The tax rate is fixed at 10%.
-Calculates the net salary after deducting the taxes.
 
 ##### Manager Class
 ```csharp
@@ -47,6 +34,26 @@ public class Manager
     public int ExpectedHours { get; set; }
     public int LoggedHours { get; set; }
     public decimal Allowance { get; set; }
+
+    public string ShowSalarySlip()
+    {
+        decimal basicSalary = 0;
+        decimal grossSalary = 0;
+        decimal taxAmount = 0;
+        decimal netSalary = 0;
+        decimal overtime = 0;
+
+        return $"Employee: #{Id} ({FullName}).\n" +
+        $"Hours Logged: {LoggedHours} hrs.\n" +
+        $"Hourly rate: {HourlyRate.ToString("C")} /hr.\n" +
+        $"Basic Salary: {basicSalary.ToString("C")}\n" +
+        $"Overtime({HRConstants.OvertimeRate}x): {overtime.ToString("C")}\n" +
+        $"Allowance: {Allowance.ToString("C")}\n" +
+        $"Gross Pay: {grossSalary.ToString("C")}\n" +
+        $"Tax Amount ({(HRConstants.TaxRate).ToString("%0")}): {taxAmount.ToString("C")}\n" +
+        $"-------------------------------------\n" +
+        $"Net Salary: {netSalary.ToString("C")}";
+    }
 }
 ```
 
@@ -56,7 +63,6 @@ public class Manager
 
 The `SalesAgent` class represents a sales agent employee.
 
-### Properties
 
 - `Id` (Integer): The employee's ID.
 - `FName` (String): The employee's first name.
@@ -65,16 +71,6 @@ The `SalesAgent` class represents a sales agent employee.
 - `ExpectedHours` (Integer): The expected number of work hours for the sales agent.
 - `LoggedHours` (Integer): The actual number of work hours logged by the sales agent.
 - `TotalSales` (Decimal): The total sales amount achieved by the sales agent.
-
-### Methods
-
-#### `CalculateNetSalary()`
-
->Calculates the gross salary based on the hourly rate and the expected number of work hours.
-Calculates the commission based on the total sales amount achieved by the sales agent.
-Adds the commission to the salary.
-Deducts the income tax from the gross salary. The tax rate is fixed at 10%.
-Calculates the net salary after deducting the taxes.
 
 ##### SalesAgent Class
 ```csharp
@@ -87,6 +83,27 @@ public class SalesAgent
     public int ExpectedHours { get; set; }
     public int LoggedHours { get; set; }
     public decimal TotalSales { get; set; }
+    
+    public string ShowSalarySlip()
+    {
+        decimal basicSalary = 0;
+        decimal grossSalary = 0;
+        decimal taxAmount = 0;
+        decimal netSalary = 0;
+        decimal overtime = ;
+        decimal commission = ;
+
+        return $"Employee: #{Id} ({FullName}).\n" +
+        $"Hours Logged: {LoggedHours} hrs.\n" +
+        $"Hourly rate: {HourlyRate.ToString("C")} /hr.\n" +
+        $"Basic Salary: {basicSalary.ToString("C")}\n" +
+        $"Overtime({HRConstants.OvertimeRate}x): {overtime.ToString("C")}\n" +
+        $"Commission({(HRConstants.CommissionRate).ToString("%0")}): {commission.ToString("C")}\n"+
+        $"Gross Pay: {grossSalary.ToString("C")}\n" +
+        $"Tax Amount ({(HRConstants.TaxRate).ToString("%0")}): {taxAmount.ToString("C")}\n" +
+        $"-------------------------------------\n" +
+        $"Net Salary: {netSalary.ToString("C")}";
+    }
 }
 ```
 
@@ -94,7 +111,6 @@ public class SalesAgent
 
 The `Handyman` class represents a handyman employee.
 
-### Properties
 
 - `Id` (Integer): The employee's ID.
 - `FName` (String): The employee's first name.
@@ -104,15 +120,6 @@ The `Handyman` class represents a handyman employee.
 - `LoggedHours` (Integer): The actual number of work hours logged by the handyman.
 - `Hardship` (Decimal): An additional hardship allowance for the handyman.
 
-### Methods
-
-#### `CalculateNetSalary()`
-
->Calculates the gross salary based on the hourly rate and the expected number of work hours.
-Determines the overtime pay for any hours exceeding the expected number of work hours.
-Adds the hardship allowance to the salary.
-Deducts the income tax from the gross salary. The tax rate is fixed at 10%.
-Calculates the net salary after deducting the taxes.
 
 ```csharp
 public class Handyman
@@ -124,19 +131,27 @@ public class Handyman
     public int ExpectedHours { get; set; }
     public int LoggedHours { get; set; }
     public decimal Hardship { get; set; }
+    
+    public string ShowSalarySlip()
+    {
+        decimal basicSalary = 0;
+        decimal grossSalary = 0;
+        decimal taxAmount = 0;
+        decimal netSalary = 0;
+        decimal overtime = 0;
+
+        return $"Employee: #{Id} ({FullName}).\n" +
+        $"Hours Logged: {LoggedHours} hrs.\n" +
+        $"Hourly rate: {HourlyRate.ToString("C")} /hr.\n" +
+        $"Basic Salary: {basicSalary.ToString("C")}\n" +
+        $"Overtime({HRConstants.OvertimeRate}x): {overtime.ToString("C")}\n" +
+        $"Hardship: {Hardship.ToString("C")}\n" +
+        $"Gross Pay: {grossSalary.ToString("C")}\n" +
+        $"Tax Amount ({(HRConstants.TaxRate).ToString("%0")}): {taxAmount.ToString("C")}\n" +
+        $"-------------------------------------\n" +
+        $"Net Salary: {netSalary.ToString("C")}";
+    }
 }
-```
-#### Salary Calculation
-```csharp
-public decimal CalculateNetSalary(Handyman handyman)
-{
-    decimal grossSalary = handyman.HourlyRate * handyman.LoggedHours;
-    decimal overtime = (handyman.LoggedHours > handyman.ExpectedHours) ? (handyman.LoggedHours - handyman.ExpectedHours) * handyman.HourlyRate * 1.5m : 0;
-    decimal salaryBeforeTax = grossSalary + overtime + handyman.Hardship;
-    decimal tax = salaryBeforeTax * 0.10m;
-    return salaryBeforeTax - tax;
-}
-```
 
 ### Software Engineer
 
@@ -175,5 +190,27 @@ public class SoftwareEngineer
     public int LoggedHours { get; set; }
     public decimal TrainingAllowance { get; set; }
     public int StoryPointCompleted { get; set; }
+
+    public string ShowSalarySlip()
+    {
+        decimal basicSalary = CalculateBasicSalary();
+        decimal grossSalary = CalculateGrossPayAmount();
+        decimal taxAmount = CalculateTaxAmount();
+        decimal netSalary = CalculateNetSalary();
+        decimal overtime = CalculateOvertimeAmount();
+        decimal bonus = CalculateBonus();
+
+        return $"Employee: #{Id} ({FullName}).\n" +
+        $"Hours Logged: {LoggedHours} hrs.\n" +
+        $"Hourly rate: {HourlyRate.ToString("C")} /hr.\n" +
+        $"Basic Salary: {basicSalary.ToString("C")}\n" +
+        $"Overtime({HRConstants.OvertimeRate}x): {overtime.ToString("C")}\n" +
+        $"Training Allowance: {TrainingAllowance.ToString("C")}\n" +
+        $"Bonus(>={(HRConstants.SoftwareEngineerStoryPointThreshold)}): Bonus.ToString("C")}\n" +
+        $"Gross Pay: {grossSalary.ToString("C")}\n" +
+        $"Tax Amount ({(HRConstants.TaxRate).ToString("%0")}): {taxAmount.ToString("C")}\n" +
+        $"-------------------------------------\n" +
+        $"Net Salary: {netSalary.ToString("C")}";
+    }
 }
 ```
