@@ -47,16 +47,6 @@ public class Manager
     public int ExpectedHours { get; set; }
     public int LoggedHours { get; set; }
     public decimal Allowance { get; set; }
-
-    public decimal CalculateNetSalary()
-    {
-       // • Calculate basic salary احسب الراتب الإجمالي (HourRate & ExpectedHours)
-       // • Calculate overtime احسب العمل الإضافي ((LoggedHours - ExpectedHours ) X 1.5 X HourRate)
-       // • Add Allowance to the salary أضف البدل إلى الراتب
-       // * Calculate Gross Salary
-       // • Deduct income tax خصم ضريبة الدخل (Tax rate is 10%)
-       // • Calculate net salary احسب الراتب الصافي
-    }
 }
 ```
 
@@ -97,16 +87,6 @@ public class SalesAgent
     public int ExpectedHours { get; set; }
     public int LoggedHours { get; set; }
     public decimal TotalSales { get; set; }
-
-    public decimal CalculateNetSalary()
-    {
-       // • Calculate basic salary احسب الراتب الإجمالي (HourRate & ExpectedHours)
-       // • Calculate overtime احسب العمل الإضافي ((LoggedHours - ExpectedHours ) X 1.5 X HourRate)
-       // • Calculate Commission  احسب العمولة (TotalSales * Commission)
-       // * Calculate Gross Salary
-       // • Deduct income tax خصم ضريبة الدخل (Tax rate is 10%)
-       // • Calculate net salary احسب الراتب الصافي
-    }
 }
 ```
 
@@ -144,16 +124,6 @@ public class Handyman
     public int ExpectedHours { get; set; }
     public int LoggedHours { get; set; }
     public decimal Hardship { get; set; }
-
-    public decimal CalculateNetSalary()
-    {
-       // • Calculate basic salary احسب الراتب الإجمالي (HourRate & ExpectedHours)
-       // • Calculate overtime احسب العمل الإضافي ((LoggedHours - ExpectedHours ) X 1.5 X HourRate)
-       // • Add Hardship اضف صعوبة العمل  (fixed amount of $75)
-       // * Calculate Gross Salary
-       // • Deduct income tax خصم ضريبة الدخل (Tax rate is 10%)
-       // • Calculate net salary احسب الراتب الصافي
-    }
 }
 ```
 #### Salary Calculation
@@ -205,16 +175,5 @@ public class SoftwareEngineer
     public int LoggedHours { get; set; }
     public decimal TrainingAllowance { get; set; }
     public int StoryPointCompleted { get; set; }
-
-    public decimal CalculateNetSalary()
-    {
-       // • Calculate basic salary احسب الراتب الإجمالي (HourRate & ExpectedHours)
-       // • Calculate overtime احسب العمل الإضافي ((LoggedHours - ExpectedHours ) X 1.5 X HourRate)
-       // • Add Training Allowance اضف بدل تدريب  (fixed amount of $50)
-       // • Add Bonus Allowance اضف بدل تدريب  (add $40 when complete 8 user story or above)
-       // * Calculate Gross Salary
-       // • Deduct income tax خصم ضريبة الدخل (Tax rate is 10%)
-       // • Calculate net salary احسب الراتب الصافي
-    }
 }
 ```
